@@ -1,193 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="">
-
-    <title>SARVESH DEVVANSHI</title>
-    <meta name="description" content="" />
-    <meta name="keyword" content="" />
-
-   
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-</head>
-
-<body class="page-wrapper home-page-3">
-    <!--Header Section-->
-
-    <div id="slider">
-        <div class="slider-item">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="images/slider/7.jpg" alt="">
-                        <div class="carousel-caption">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <span>SARVESH DEVVANSHI WELCOME YOU IN HIS SITE
-                                            <br>
-                                            </span>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="images/slider/5.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/slider/6.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/slider/8.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/slider/6.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="images/slider/8.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- 
+    Document   : index
+    Created on : 15 Jun, 2021, 11:44:22 PM
+    Author     : sarvesh
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <style>
+            body{
+                font-family: ui-monospace;
+                font-size: 25px;
+            }
+            form{
+                border: 1px solid black;
+                    padding: 44px;
+                    margin: 0px 23%;
+                    border-radius: 10%;
+                    background-color: wheat;
+                    box-shadow: 10px 20px #888888;
+            }
+            .mydivElements{
+                outline: none;
+                border: none;
+                background-color: wheat;
+                border-bottom: 1px solid;
+                font-size: 18px;
+            }
+            #submit{
+                width: 90%;
+                padding: 10px;
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body>
     
-
-    <!--Our Service Section-->
-    <!-- about us -->
-    <section class="bg-gray full-row">
-        <div class="section-title-area wow fadeIn animated" data-wow-delay="300ms" data-wow-duration="500ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeIn;">
-            <h2 class="section-title"><span class="title-tag"></span>Welcome To skmmarketing </h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 left-app">
-                   
-                </div>
-                <div class="col-md-6 col-sm-6 right-app">
-                    <div class="inner-app">
-
-                        <p> one of the leading company which provide 100% pure products in affordable price. Our target is to make largest no of chain of member and full fill their desire...</p>
-                        <p><strong>Read More...</strong></p>
-
-                    </div>
-                </div>
+        <h1>Form Validation</h1>
+        <form action='#' onsubmit="return validateForm()">
+            <center>
+            <div >
+                <input class='mydivElements' type='text' id='name' placeholder='Name' autofocus>
+                <div><span id='nameError' ></span></div>
+            </div><br>
+            <div >
+                <input class='mydivElements' type='text' id='number' placeholder="Contact Number">
+                <div><span id='numberError'></span></div>
             </div>
-        </div>
-    </section>
-   
-    <!--Download Guide Section-->
-    <div class="bg-default full-row padding-40">
-        <div class="container">
-            <div class="row guide flex-box">
-                <div class="col-md-9 col-sm-7">
-                    <h3 class="banner-title no-margin color-white">Download our brochure</h3>
-                </div>
-                <div class="col-md-3 col-sm-5">
-                    <a class="btn btn-secondary download-btn home-download" download href="resource/SK.pdf"><i class="fa fa-file-pdf-o"></i>Download PDF</a>
-                </div>
+   <br>         
+            <div>
+                <input class='mydivElements' type='text' id='email' placeholder="Email">
+                <div><span id='emailError' ></span></div>
             </div>
-        </div>
-    </div>
-    <!--Footer Section-->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-3">
-                    <div class="footer-widget">
-                        <img class="nav-logo" src="images/logo/logo.png" alt="">
-                        <div class="widget-content">
-                            <p>
-                            
-                            </p>
-                            <div class="footer-social-icon">
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Useful Links</h3>
-                        <div class="widget-content">
-                            <ul class="menu-footer">
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Terms and Condition</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Head Office</h3>
-                        <div class="widget-content">
-                            <ul class="address">
-                                <li><i class="fa fa-map-marker"></i><span></span></li>
-                                <li><i class="fa fa-phone"></i><span>(+91) - </span></li>
-                                <li><i class="fa fa-envelope"></i><span></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3">
-                    <div class="footer-widget">
-                        <h3 class="widget-title">Branch Office</h3>
-                        <div class="widget-content">
-                            <ul class="address">
-                                <li><i class="fa fa-map-marker"></i><span></span></li>
-                                <li><i class="fa fa-phone"></i><span>(+91) - </span></li>
-                                <li><i class="fa fa-envelope"></i><span></span></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
+            <br>
+            <div>
+                <input class='mydivElements' type='password' id='pass' placeholder="Password">
+                <div><span id='passError'  ></span></div>
             </div>
-        </div>
-    </section>
-    <!--Footer Bottom-->
-    <div id="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="copyrighttt">Copyright @ 2019 <a href="index-2.html" class="ser">skmmarketing.in</a> All rights reserved.</div>
-                </div>
-
+            <br>
+            <div>
+                <input type='submit' id='submit' value='Register'>
             </div>
-        </div>
-
-    </div>
-    
-  
-
-   
-</body>
-
+        </center>
+        </form>
+        <script>
+            var input=document.getElementById('name');
+            input.onkeyup=function(){
+            var pattern=new RegExp('[0-9]');
+            if(input.value.match(pattern)){
+                document.getElementById('nameError').innerHTML="<i>&#10006</i>Please enter characters Only!";
+                document.getElementById('nameError').style.color='red';
+            }
+            else{
+                document.getElementById('nameError').innerHTML="";
+                document.getElementById('nameError').style.color='green';
+            }
+            
+        }
+        </script>
+    <script>
+        function validateForm(){
+            var name=document.getElementById('name');
+            var number=document.getElementById('number').value;
+            var email=document.getElementById('email');
+            var pass=document.getElementById('pass');
+            var fl=true;
+            var patt=new RegExp('^[0-9]*$');
+            var emailPatt=new RegExp('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]{2,3}$');
+            
+            if(name.value.length === 0){
+                document.getElementById('nameError').innerHTML="<i>&#10006</i>Name cannot be Empty!";
+                document.getElementById('nameError').style.color='red';
+                document.getElementById('nameError').style.fontSize='14px';
+                name.focus();
+                fl=false;
+            }
+            else{
+                document.getElementById('nameError').innerHTML="<i>&#10004</i>";
+                document.getElementById('nameError').style.color='green';
+                document.getElementById('nameError').style.fontSize='24px';
+            }
+            
+            if(pass.value.length < 6){
+                document.getElementById('passError').innerHTML="<i>&#10006</i>Password should be at least 6 character!";
+                document.getElementById('passError').style.color='red';
+                document.getElementById('passError').style.fontSize='14px';
+                pass.focus();
+                fl=false;
+            }
+            else{
+                document.getElementById('passError').innerHTML="<i>&#10004</i>";
+                document.getElementById('passError').style.color='green';
+                document.getElementById('passError').style.fontSize='24px';
+            }
+            
+            if(!patt.test(number)){
+                document.getElementById('numberError').innerHTML="<i>&#10006</i>Contact Number shoubl be a digit(0-9)!";
+                document.getElementById('numberError').style.color='red';
+                document.getElementById('numberError').style.fontSize='14px';
+                fl=false;
+            }
+            else if(number.length > 10 || number.length <10){
+                document.getElementById('numberError').innerHTML="<i>&#10006</i>Contact Number must be 10 digit number!";
+                document.getElementById('numberError').style.color='red';
+                
+                document.getElementById('numberError').style.fontSize='14px';
+                fl=false;
+            }
+            else{
+                document.getElementById('numberError').innerHTML='<i>&#10004</i>';
+                document.getElementById('numberError').style.color='green';
+                document.getElementById('numberError').style.fontSize='24px';
+            }
+            
+            if(!emailPatt.test(email.value)){
+                document.getElementById('emailError').innerHTML="<i>&#10006</i>Please enter correct email!";
+                document.getElementById('emailError').style.color='red';
+                
+                document.getElementById('emailError').style.fontSize='14px';
+                email.focus();
+                fl=false;
+            }
+            else{
+                document.getElementById('emailError').innerHTML='<i>&#10004</i>';
+                document.getElementById('emailError').style.color='green';
+                
+                document.getElementById('emailError').style.fontSize='24px';
+            } 
+                return fl;
+        }
+    </script>
+    </body>
 </html>
+
