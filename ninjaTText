@@ -1,8 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int arr[]={8,12,16,4,0,20};
-    int k=4,i,j, count=0, len=6;
+    int len;
+    int arr[len];
+    int k,i,j, count=0;
+    scanf("%d",&len);
+    for(i=0;i<len;i++){
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&k);
     for(i=0;i<len;i++){
         for(j=i+1;j<len;j++){
             if(abs(arr[i]-arr[j]) == k)
