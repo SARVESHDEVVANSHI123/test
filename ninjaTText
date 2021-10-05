@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+    int arr[]={8,12,16,4,0,20};
+    int k=4,i,j, count=0, len=6;
+    for(i=0;i<len;i++){
+        for(j=i+1;j<len;j++){
+            if(abs(arr[i]-arr[j]) == k)
+               { count++;
+                   //printf("(%d,%d)\n",arr[i],arr[j]);
+               }
+        }
+    }
+    printf("%d",count);
+	return 0;
+}
