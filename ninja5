@@ -1,0 +1,125 @@
+/*
+Problem Description -:  In this 3 Palindrome, Given an input string word, split the string into exactly 3 palindromic substrings. Working from left to right, choose the smallest split for the first substring that still allows the remaining word to be split into 2 palindromes.
+Similarly, choose the smallest second palindromic substring that leaves a third palindromic substring.
+If there is no way to split the word into exactly three palindromic substrings, print “Impossible” (without quotes). Every character of the string needs to be consumed.
+
+Cases not allowed –
+
+After finding 3 palindromes using above instructions, if any character of the original string remains unconsumed.
+No character may be shared in forming 3 palindromes.
+Constraints
+
+1 <= the length of input sting <= 1000
+Input
+
+First line contains the input string consisting of characters between [a-z].
+Output
+
+Print 3 substrings one on each line.
+Time Limit
+
+1
+
+Examples
+
+Example 1
+
+Input
+
+nayannamantenet
+
+Output
+
+nayan
+
+naman
+
+tenet
+
+Explanation
+
+The original string can be split into 3 palindromes as mentioned in the output.
+However, if the input was nayanamantenet, then the answer would be “Impossible”.
+Example 2
+
+Input
+
+aaaaa
+
+Output
+
+a
+
+a
+
+aaa
+
+Explanation
+
+The other ways to split the given string into 3 palindromes are as follows –
+[a, aaa, a], [aaa, a, a], [aa, aa, a], etc.
+Since we want to minimize the length of the first palindromic substring using left to right processing, the correct way to split is [a, a, aaa].
+Example 3
+
+Input
+
+aaaabaaaa
+
+Output
+
+a
+
+aaabaaa
+
+a
+
+Explanation
+
+The other ways to split the given string into 3 palindromes are as follows –
+[aaaa, b, aaaa], [aa, aabaa, aa], etc.
+Since we want to minimize the length of the first palindromic substring using left to right processing, the correct way to split is [a, aaabaaa, a].
+*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    static boolean palindrom(String str){
+        if(str.length() == 1) { return true;}
+        StringBuffer s=new StringBuffer(str);
+        s=s.reverse();
+        String rev=new String(s);
+        return str.equals(rev);
+        
+    }
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		String s=sc.next();
+		int len=s.length();
+		boolean flag=false;
+		String str1="", str2="", str3=""; 
+		for(int i=1;i<len-1;i++){
+		    str1=s.substring(0,i);
+		    if(palindrom(str1)){
+		    for(int j=1;j<len-i;j++){
+		        str2=s.substring(i,i+j);
+		        str3=s.substring(i+j,len);
+		        if(palindrom(str2)&&palindrom(str3)){
+		           System.out.println(str1+"\n"+str2+"\n"+str3);
+		           flag=true;
+		           break;
+		        }
+		    }
+		    
+		    if(flag)
+		    break;
+		}
+		}
+		if(!flag)
+		    System.out.println("Impossible");
+	}
+}
